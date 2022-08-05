@@ -32,7 +32,7 @@ const AddressForm: React.FC<AddressFormProps> = ({ handleSubmit }) => {
           className="w-full max-w-full flex flex-col gap-6"
           onSubmit={handleSubmitAddress}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 -mx-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.875rem]">
             <Input
               label="CEP"
               id="zipCode"
@@ -52,7 +52,7 @@ const AddressForm: React.FC<AddressFormProps> = ({ handleSubmit }) => {
               placeholder="Ex: 123"
             />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-8 gap-2 -mx-3">
+          <div className="grid grid-cols-1 md:grid-cols-8 gap-[1.875rem]">
             <Input
               label="Nome da Rua"
               id="street"
@@ -84,7 +84,7 @@ const AddressForm: React.FC<AddressFormProps> = ({ handleSubmit }) => {
               gridStyle="md:col-span-4"
             />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 -mx-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.875rem]">
             <Input
               label="Complemento"
               id="complement"

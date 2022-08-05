@@ -43,8 +43,7 @@ const OperationForm: React.FC = () => {
           className="w-full max-w-full flex flex-col gap-6"
           onSubmit={handleSubmitOperation}
         >
-          {/* <div className="flex flex-wrap -mx-3 mb-2"> */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 -mx-3 mb-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.875rem] mb-2">
             <Input
               label="Quantos Caminhões?"
               id="name"
@@ -54,7 +53,7 @@ const OperationForm: React.FC = () => {
               value={operation.amountVeicules}
               placeholder="Ex: 22"
             />
-            <div className="w-full px-3 mb-6 md:mb-0">
+            <div className="w-full">
               <label
                 className="block tracking-wide text-grey-px-600 text-base mb-4"
                 htmlFor="grid-state"
@@ -65,7 +64,7 @@ const OperationForm: React.FC = () => {
                 <select
                   className="block appearance-none w-full bg-grey-px-50 border border-gray-200 text-gray-700 py-3 px-4 rounded-lg leading-tight "
                   id="grid-state"
-                  defaultValue=""
+                  // defaultValue=""
                   value={operation.operationState}
                   onChange={handleOperationState}
                 >

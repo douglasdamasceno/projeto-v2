@@ -41,7 +41,7 @@ const CompanyInformationForm: React.FC<CompanyInformationFormProps> = ({
           className="w-full max-w-full flex flex-col gap-6"
           onSubmit={handleSubmitCompanyInformation}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 -mx-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.875rem]">
             <Input
               label="Nome da Transportadora"
               id="name"
@@ -61,7 +61,7 @@ const CompanyInformationForm: React.FC<CompanyInformationFormProps> = ({
               placeholder="Ex: 123"
             />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 -mx-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.875rem]">
             <Input
               label="Nome do Responsável"
               id="nameResponsible"
@@ -81,7 +81,7 @@ const CompanyInformationForm: React.FC<CompanyInformationFormProps> = ({
               placeholder="Ex: 123"
             />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 -mx-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.875rem]">
             <Input
               label="E-mail Principal"
               id="email-primary"
@@ -104,7 +104,7 @@ const CompanyInformationForm: React.FC<CompanyInformationFormProps> = ({
               placeholder="Ex: 123"
             />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 -mx-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.875rem]">
             <InputPassword
               label="Alterar Senha"
               id="new-password"
@@ -131,7 +131,7 @@ const CompanyInformationForm: React.FC<CompanyInformationFormProps> = ({
               placeholder="Ex: 123"
             />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 -mx-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.875rem]">
             <Input
               label="Inscrição Estadual"
               id="stateRegistration"

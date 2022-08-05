@@ -35,7 +35,7 @@ const ContactForm: React.FC = () => {
           className="w-full max-w-full flex flex-col gap-6"
           onSubmit={handleSubmitContact}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 -mx-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.875rem]">
             <Input
               label="Contato do Rastreamento"
               id="trackingContact"
@@ -61,7 +61,7 @@ const ContactForm: React.FC = () => {
               placeholder="Ex: 123"
             />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 -mx-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.875rem]">
             <Input
               label="Contato do Reabastecimento"
               id="replenishmentContact"
@@ -87,7 +87,7 @@ const ContactForm: React.FC = () => {
               placeholder="Ex: 123"
             />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 -mx-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.875rem]">
             <Input
               label="Contato da Operação"
               id="operationContact"
@@ -113,7 +113,7 @@ const ContactForm: React.FC = () => {
               placeholder="Ex: 123"
             />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 -mx-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.875rem]">
             <Input
               label="Contato da Manutenção"
               id="maintenanceContact"
@@ -139,7 +139,7 @@ const ContactForm: React.FC = () => {
               placeholder="Ex: 123"
             />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 -mx-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.875rem]">
             <Input
               label="Email para recebimento do NFS-e"
               id="emailReceiveNFS"

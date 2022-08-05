@@ -18,10 +18,10 @@ const Input = ({
   placeholder,
   autoComplete,
   type = "text",
-  gridStyle,
+  gridStyle = "",
 }: Props) => {
   return (
-    <div className={"w-full px-3 " + gridStyle}>
+    <div className={"w-full " + gridStyle}>
       <label
         className="block tracking-wide text-grey-px-600 text-base mb-4"
         htmlFor={id}

@@ -22,7 +22,7 @@ const InputPassword = ({
     setIsVisible(!isVisible);
   };
   return (
-    <div className={"w-full px-3"}>
+    <div className={"w-full"}>
       <label
         className="block tracking-wide text-grey-px-600 text-base mb-4"
         htmlFor={id}
