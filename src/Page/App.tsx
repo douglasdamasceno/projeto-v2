@@ -1,5 +1,6 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useState } from "react";
 import { Route, Routes } from "react-router-dom";
+import InputPassword from "../components/InputPassword";
 
 import FormNavigation, {
   pageInfoNavigation,
@@ -20,7 +21,7 @@ export default function App(props: any) {
   };
 
   return (
-    <div className="px-8">
+    <div className="px-8 pb-8">
       <div className="mt-14 mb-3">
         <Header
           title="Atualizar Cadastro"

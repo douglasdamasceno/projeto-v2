@@ -29,7 +29,7 @@ const Input = ({
         {label}
       </label>
       <input
-        className="w-full px-3 py-2 text-grey-px-300 text-base font-medium bg-grey-px-50 border-outline-px border rounded-lg"
+        className="w-full px-3 py-2 text-grey-px-300 text-base font-medium bg-grey-px-50 border-outline-px border rounded-lg focus:outline-none"
         id={id}
         type={type}
         autoComplete={autoComplete}

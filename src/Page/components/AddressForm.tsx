@@ -23,7 +23,7 @@ const AddressForm: React.FC<AddressFormProps> = ({ handleSubmit }) => {
 
   return (
     <>
-      <div className="flex flex-col items-start p-10 shadow-2xl gap-8 bg-grey-px-50 border border-grey-px-100">
+      <div className="flex flex-col items-start p-10 shadow-2xl gap-8 bg-grey-px-50 border rounded-lg border-grey-px-100">
         <h4 className="text-grey-px-800 font-bold text-xl">
           Endereço da empresa
         </h4>
@@ -32,7 +32,7 @@ const AddressForm: React.FC<AddressFormProps> = ({ handleSubmit }) => {
           className="w-full max-w-full flex flex-col gap-6"
           onSubmit={handleSubmitAddress}
         >
-          <div className="flex flex-wrap -mx-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 -mx-3">
             <Input
               label="CEP"
               id="zipCode"
@@ -41,7 +41,6 @@ const AddressForm: React.FC<AddressFormProps> = ({ handleSubmit }) => {
               }}
               value={address.zipCode}
               placeholder="Ex: 123"
-              gridStyle="md:w-1/2"
             />
             <Input
               label="Bairro"
@@ -51,7 +50,6 @@ const AddressForm: React.FC<AddressFormProps> = ({ handleSubmit }) => {
               }}
               value={address.neighborhood}
               placeholder="Ex: 123"
-              gridStyle="md:w-1/2"
             />
           </div>
           <div className="flex flex-wrap -mx-3">
@@ -88,7 +86,7 @@ const AddressForm: React.FC<AddressFormProps> = ({ handleSubmit }) => {
               gridStyle="md:w-1/2"
             />
           </div>
-          <div className="flex flex-wrap -mx-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 -mx-3">
             <Input
               label="Complemento"
               id="complement"
@@ -97,7 +95,6 @@ const AddressForm: React.FC<AddressFormProps> = ({ handleSubmit }) => {
               }}
               value={address.complement}
               placeholder="Ex: 123"
-              gridStyle="md:w-1/2"
             />
             <Input
               label="Estado"
@@ -107,7 +104,6 @@ const AddressForm: React.FC<AddressFormProps> = ({ handleSubmit }) => {
               }}
               value={address.state}
               placeholder="Ex: 123"
-              gridStyle="md:w-1/2"
             />
           </div>
         </form>

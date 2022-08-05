@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "../../components/Button";
 import Input from "../../components/Input";
+import InputPassword from "../../components/InputPassword";
 
 interface CompanyInformationFormProps {
   handleSubmit: (result: any) => void;
@@ -40,7 +41,7 @@ const CompanyInformationForm: React.FC<CompanyInformationFormProps> = ({
           className="w-full max-w-full flex flex-col gap-6"
           onSubmit={handleSubmitCompanyInformation}
         >
-          <div className="flex flex-wrap -mx-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 -mx-3">
             <Input
               label="Nome da Transportadora"
               id="name"
@@ -48,8 +49,7 @@ const CompanyInformationForm: React.FC<CompanyInformationFormProps> = ({
                 setFormBasic({ ...formBasic, name: e.target.value })
               }
               value={formBasic.name}
-              placeholder="Ex: Transportadora XYZ"
-              gridStyle="md:w-1/2"
+              placeholder="Ex: 123"
             />
             <Input
               label="CNPJ"
@@ -59,10 +59,9 @@ const CompanyInformationForm: React.FC<CompanyInformationFormProps> = ({
               }
               value={formBasic.cnpj}
               placeholder="Ex: 123"
-              gridStyle="md:w-1/2"
             />
           </div>
-          <div className="flex flex-wrap -mx-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 -mx-3">
             <Input
               label="Nome do Responsável"
               id="nameResponsible"
@@ -70,8 +69,7 @@ const CompanyInformationForm: React.FC<CompanyInformationFormProps> = ({
                 setFormBasic({ ...formBasic, nameResponsible: e.target.value })
               }
               value={formBasic.nameResponsible}
-              placeholder="Ex: Transportadora XYZ"
-              gridStyle="md:w-1/2"
+              placeholder="Ex: 123"
             />
             <Input
               label="Telefone"
@@ -81,10 +79,9 @@ const CompanyInformationForm: React.FC<CompanyInformationFormProps> = ({
               }
               value={formBasic.phone}
               placeholder="Ex: 123"
-              gridStyle="md:w-1/2"
             />
           </div>
-          <div className="flex flex-wrap -mx-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 -mx-3">
             <Input
               label="E-mail Principal"
               id="email-primary"
@@ -93,8 +90,7 @@ const CompanyInformationForm: React.FC<CompanyInformationFormProps> = ({
               }
               value={formBasic.emailPrimary}
               type="email"
-              placeholder="Ex: Transportadora XYZ"
-              gridStyle="md:w-1/2"
+              placeholder="Ex:123"
             />
             <Input
               label="E-mail Secundário"
@@ -106,11 +102,10 @@ const CompanyInformationForm: React.FC<CompanyInformationFormProps> = ({
               value={formBasic.emailSecondary}
               type="email"
               placeholder="Ex: 123"
-              gridStyle="md:w-1/2"
             />
           </div>
-          <div className="flex flex-wrap -mx-3">
-            <Input
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 -mx-3">
+            <InputPassword
               label="Alterar Senha"
               id="new-password"
               autoComplete="new-password"
@@ -119,10 +114,9 @@ const CompanyInformationForm: React.FC<CompanyInformationFormProps> = ({
               }
               value={formBasic.password}
               type="password"
-              placeholder="Ex: Transportadora XYZ"
-              gridStyle="md:w-1/2"
+              placeholder="Ex: 123"
             />
-            <Input
+            <InputPassword
               label="Confirmar Alteração de Senha"
               id="new-password-confirmation"
               autoComplete="new-password"
@@ -135,10 +129,9 @@ const CompanyInformationForm: React.FC<CompanyInformationFormProps> = ({
               value={formBasic.passwordConfirmation}
               type="password"
               placeholder="Ex: 123"
-              gridStyle="md:w-1/2"
             />
           </div>
-          <div className="flex flex-wrap -mx-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 -mx-3">
             <Input
               label="Inscrição Estadual"
               id="stateRegistration"
@@ -150,7 +143,6 @@ const CompanyInformationForm: React.FC<CompanyInformationFormProps> = ({
               }
               value={formBasic.stateRegistration}
               placeholder="Ex: 123"
-              gridStyle="md:w-1/2"
             />
             <Input
               label="Inscrição Municipal"
@@ -163,11 +155,10 @@ const CompanyInformationForm: React.FC<CompanyInformationFormProps> = ({
               }
               value={formBasic.municipalRegistration}
               placeholder="Ex: 123"
-              gridStyle="md:w-1/2"
             />
           </div>
           <div className="flex flex-col flex-wrap px-3  -mx-3 gap-5">
-            <label className="block tracking-wide text-grey-px-600 text-base mb-4">
+            <label className="block tracking-wide text-grey-px-600 text-base">
               Trocar foto
             </label>
             <div className="flex flex-col justify-center items-center w-full h-full md:w-[31.25rem] sm:h-[6.875rem]  px-7 gap-[0.625rem] border border-dashed border-outline-px">

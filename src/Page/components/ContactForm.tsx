@@ -2,8 +2,6 @@ import React from "react";
 import Button from "../../components/Button";
 import Input from "../../components/Input";
 
-// import { Container } from './styles';
-
 const ContactForm: React.FC = () => {
   const [contactForm, setContactForm] = React.useState({
     trackingContact: "",
@@ -37,7 +35,7 @@ const ContactForm: React.FC = () => {
           className="w-full max-w-full flex flex-col gap-6"
           onSubmit={handleSubmitContact}
         >
-          <div className="flex flex-wrap -mx-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 -mx-3">
             <Input
               label="Contato do Rastreamento"
               id="trackingContact"
@@ -49,7 +47,6 @@ const ContactForm: React.FC = () => {
               }
               value={contactForm.trackingContact}
               placeholder="Ex: 123"
-              gridStyle="md:w-1/2"
             />
             <Input
               label="Telefone do Rastreamento"
@@ -62,10 +59,9 @@ const ContactForm: React.FC = () => {
               }
               value={contactForm.trackingPhone}
               placeholder="Ex: 123"
-              gridStyle="md:w-1/2"
             />
           </div>
-          <div className="flex flex-wrap -mx-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 -mx-3">
             <Input
               label="Contato do Reabastecimento"
               id="replenishmentContact"
@@ -77,7 +73,6 @@ const ContactForm: React.FC = () => {
               }
               value={contactForm.replenishmentContact}
               placeholder="Ex: 123"
-              gridStyle="md:w-1/2"
             />
             <Input
               label="Telefone do Reabastecimento"
@@ -90,10 +85,9 @@ const ContactForm: React.FC = () => {
               }
               value={contactForm.replenishmentPhone}
               placeholder="Ex: 123"
-              gridStyle="md:w-1/2"
             />
           </div>
-          <div className="flex flex-wrap -mx-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 -mx-3">
             <Input
               label="Contato da Operação"
               id="operationContact"
@@ -105,7 +99,6 @@ const ContactForm: React.FC = () => {
               }
               value={contactForm.operationContact}
               placeholder="Ex: 123"
-              gridStyle="md:w-1/2"
             />
             <Input
               label="Telefone da Operação"
@@ -118,10 +111,9 @@ const ContactForm: React.FC = () => {
               }
               value={contactForm.operationPhone}
               placeholder="Ex: 123"
-              gridStyle="md:w-1/2"
             />
           </div>
-          <div className="flex flex-wrap -mx-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 -mx-3">
             <Input
               label="Contato da Manutenção"
               id="maintenanceContact"
@@ -133,7 +125,6 @@ const ContactForm: React.FC = () => {
               }
               value={contactForm.maintenanceContact}
               placeholder="Ex: 123"
-              gridStyle="md:w-1/2"
             />
             <Input
               label="Telefone da Manutenção"
@@ -146,10 +137,9 @@ const ContactForm: React.FC = () => {
               }
               value={contactForm.maintenancePhone}
               placeholder="Ex: 123"
-              gridStyle="md:w-1/2"
             />
           </div>
-          <div className="flex flex-wrap -mx-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 -mx-3">
             <Input
               label="Email para recebimento do NFS-e"
               id="emailReceiveNFS"
@@ -161,7 +151,6 @@ const ContactForm: React.FC = () => {
               }
               value={contactForm.emailReceiveNFS}
               placeholder="Ex: 123"
-              gridStyle="md:w-1/2"
             />
             <Input
               label="Dia limite para recebimento da nota"
@@ -174,7 +163,6 @@ const ContactForm: React.FC = () => {
               }
               value={contactForm.deadlineReceiveNote}
               placeholder="Ex: 123"
-              gridStyle="md:w-1/2"
             />
           </div>
         </form>
