@@ -14,7 +14,7 @@ const Header = ({ title, availableBalance, amount }: Props) => {
   };
 
   return (
-    <header className="flex flex-col gap-3 md:gap-0 md:flex-row justify-between items-center">
+    <header className="flex flex-col gap-3 md:gap-0 md:flex-row justify-between items-center pr-20">
       <h1 className="font-bold text-4xl text-grey-px-800">{title}</h1>
       <div className="flex flex-col items-center md:pr-[4.875rem] md:items-end justify-center w-fit md:h-[6.438rem] shadow-xl p-4 bg-grey-px-50 rounded-[0.625rem]">
         <div className="flex flex-col md:flex-row items-center gap-1">

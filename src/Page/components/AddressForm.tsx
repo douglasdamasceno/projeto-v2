@@ -52,29 +52,27 @@ const AddressForm: React.FC<AddressFormProps> = ({ handleSubmit }) => {
               placeholder="Ex: 123"
             />
           </div>
-          <div className="flex flex-wrap -mx-3">
-            <div className="flex flex-wrap w-1/2">
-              <Input
-                label="Nome da Rua"
-                id="street"
-                onChange={event => {
-                  setAddress({ ...address, street: event.target.value });
-                }}
-                value={address.street}
-                placeholder="Ex: 123"
-                gridStyle="md:w-2/3"
-              />
-              <Input
-                label="Número"
-                id="number"
-                onChange={event => {
-                  setAddress({ ...address, number: event.target.value });
-                }}
-                value={address.number}
-                placeholder="Ex: 123"
-                gridStyle="md:w-1/3"
-              />
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-8 gap-2 -mx-3">
+            <Input
+              label="Nome da Rua"
+              id="street"
+              onChange={event => {
+                setAddress({ ...address, street: event.target.value });
+              }}
+              value={address.street}
+              placeholder="Ex: 123"
+              gridStyle="md:col-span-3"
+            />
+            <Input
+              label="Número"
+              id="number"
+              onChange={event => {
+                setAddress({ ...address, number: event.target.value });
+              }}
+              value={address.number}
+              placeholder="Ex: 123"
+              gridStyle="md:col-span-1"
+            />
             <Input
               label="Cidade"
               id="city"
@@ -83,7 +81,7 @@ const AddressForm: React.FC<AddressFormProps> = ({ handleSubmit }) => {
               }}
               value={address.city}
               placeholder="Ex: 123"
-              gridStyle="md:w-1/2"
+              gridStyle="md:col-span-4"
             />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2 -mx-3">
