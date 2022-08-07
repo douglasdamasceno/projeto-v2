@@ -3,5 +3,4 @@ export type Prop = {
     balanceAvailable: number;
     title2: string;
     amount: number;
-
 }

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Props } from "./type";
+import { Props } from "./types";
 
 const Input: FC<Props> = ({
   id,

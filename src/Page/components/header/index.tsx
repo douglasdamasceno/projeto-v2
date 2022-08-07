@@ -1,5 +1,5 @@
 import { Card } from "../card";
-import { Props } from "./type";
+import { Props } from "./types";
 
 import { i18n } from "./i18n";
 
@@ -12,7 +12,7 @@ export const Header = ({ pageTitle, balanceAvailable, amount }: Props) => {
     <header className="mt-14 mb-3 flex flex-col gap-3 md:gap-0 md:flex-row justify-between items-center md:pr-20">
       <h1 className="font-bold text-4xl text-grey-px-800">{pageTitle}</h1>
       <Card
-        title={texts.availableBalance}
+        title={texts.balanceAvailable}
         balanceAvailable={balanceAvailable}
         title2={texts.balanceOnTravel}
         amount={amount}

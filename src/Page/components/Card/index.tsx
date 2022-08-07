@@ -1,13 +1,8 @@
-import React from "react";
+import { FC } from "react";
 import { formatValue } from "../../../infra/services/formatter";
-import { Prop } from "./type";
+import { Prop } from "./types";
 
-export const Card: React.FC<Prop> = ({
-  title,
-  balanceAvailable,
-  title2,
-  amount,
-}) => {
+export const Card: FC<Prop> = ({ title, balanceAvailable, title2, amount }) => {
   return (
     <div className="flex flex-col items-center md:pr-[4.875rem] md:items-end justify-center w-full md:w-fit md:h-[6.438rem] shadow-xl p-4 bg-grey-px-50 rounded-[0.625rem]">
       <div className="flex flex-col md:flex-row items-center gap-1">
