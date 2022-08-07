@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../components/Button";
+import { Button } from "../../components/button";
 import Input from "../../components/Input";
 
 const ContactForm: React.FC = () => {
@@ -167,7 +167,7 @@ const ContactForm: React.FC = () => {
           </div>
         </form>
       </div>
-      <Button formId="contact-form" marginTop="mt-2">
+      <Button formId="contact-form" className="mt-2">
         Atualizar
       </Button>
     </>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Button from "../../components/Button";
+import { Button } from "../../components/button";
 import Input from "../../components/Input";
 
 interface StateSelect {
@@ -64,7 +64,6 @@ const OperationForm: React.FC = () => {
                 <select
                   className="block appearance-none w-full bg-grey-px-50 border border-gray-200 text-gray-700 py-3 px-4 rounded-lg leading-tight "
                   id="grid-state"
-                  // defaultValue=""
                   value={operation.operationState}
                   onChange={handleOperationState}
                 >
@@ -95,7 +94,7 @@ const OperationForm: React.FC = () => {
           </div>
         </form>
       </div>
-      <Button formId="operation-form" marginTop="mt-8">
+      <Button formId="operation-form" className="mt-8">
         Atualizar
       </Button>
     </>

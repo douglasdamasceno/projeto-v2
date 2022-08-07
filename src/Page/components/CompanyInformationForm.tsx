@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Button from "../../components/Button";
+import { Button } from "../../components/button";
 import Input from "../../components/Input";
 import InputPassword from "../../components/InputPassword";
 
@@ -172,7 +172,7 @@ const CompanyInformationForm: React.FC<CompanyInformationFormProps> = ({
           </div>
         </form>
       </div>
-      <Button formId="company-information-form" marginTop="mt-5">
+      <Button formId="company-information-form" className="mt-5">
         Atualizar
       </Button>
     </>

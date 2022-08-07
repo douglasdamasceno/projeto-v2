@@ -1,6 +1,10 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
+import { i18n } from "./i18n";
+
+import { useI18N } from "../../../hooks/i18n";
+
 export const pageInfoNavigation = [
   {
     id: 1,
@@ -23,12 +27,34 @@ export const pageInfoNavigation = [
     path: "/form-contacts",
   },
 ];
-
 const FormNavigation: React.FC = () => {
   const location = useLocation();
+  const texts = useI18N(i18n);
 
+  const pageInfoNavigation = [
+    {
+      id: 1,
+      name: texts.basicData,
+      path: "/form-basic",
+    },
+    {
+      id: 2,
+      name: texts.address,
+      path: "/form-address",
+    },
+    {
+      id: 3,
+      name: texts.operation,
+      path: "/form-operations",
+    },
+    {
+      id: 4,
+      name: texts.contacts,
+      path: "/form-contacts",
+    },
+  ];
   return (
-    <nav className="flex gap-3 md:gap-8 flex-col md:flex-row">
+    <nav className="flex gap-3 md:gap-8 flex-col md:flex-row mb-7">
       {pageInfoNavigation.map(page => (
         <NavLink
           key={page.id}

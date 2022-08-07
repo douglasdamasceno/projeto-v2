@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Button from "../../components/Button";
+import { Button } from "../../components/button";
 import Input from "../../components/Input";
 
 interface AddressFormProps {
@@ -61,7 +61,7 @@ const AddressForm: React.FC<AddressFormProps> = ({ handleSubmit }) => {
               }}
               value={address.street}
               placeholder="Ex: 123"
-              gridStyle="md:col-span-3"
+              className="md:col-span-3"
             />
             <Input
               label="Número"
@@ -71,7 +71,7 @@ const AddressForm: React.FC<AddressFormProps> = ({ handleSubmit }) => {
               }}
               value={address.number}
               placeholder="Ex: 123"
-              gridStyle="md:col-span-1"
+              className="md:col-span-1"
             />
             <Input
               label="Cidade"
@@ -81,7 +81,7 @@ const AddressForm: React.FC<AddressFormProps> = ({ handleSubmit }) => {
               }}
               value={address.city}
               placeholder="Ex: 123"
-              gridStyle="md:col-span-4"
+              className="md:col-span-4"
             />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.875rem]">
@@ -106,7 +106,7 @@ const AddressForm: React.FC<AddressFormProps> = ({ handleSubmit }) => {
           </div>
         </form>
       </div>
-      <Button formId="address-form" marginTop="mt-5">
+      <Button formId="address-form" className="mt-5">
         Atualizar
       </Button>
     </>

@@ -1,18 +1,20 @@
-import { Suspense, lazy, useState } from "react";
+import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
-import InputPassword from "../components/InputPassword";
+
+import { i18n } from "./i18n";
 
 import FormNavigation, {
   pageInfoNavigation,
-} from "./components/FormNavigation";
-import Header from "./components/Header";
+} from "../components/form-navigation";
+import { Header } from "../components/header";
+import { useI18N } from "../../hooks/i18n";
 
 const CompanyInformationForm = lazy(
-  () => import("./components/CompanyInformationForm")
+  () => import("../components/CompanyInformationForm")
 );
-const AddressForm = lazy(() => import("./components/AddressForm"));
-const OperationForm = lazy(() => import("./components/OperationsForm"));
-const ContactForm = lazy(() => import("./components/ContactForm"));
+const AddressForm = lazy(() => import("../components/AddressForm"));
+const OperationForm = lazy(() => import("../components/OperationsForm"));
+const ContactForm = lazy(() => import("../components/ContactForm"));
 
 export default function App(props: any) {
   const handleSubmitAddress = (result: any) => {
@@ -20,18 +22,15 @@ export default function App(props: any) {
     console.log(result);
   };
 
+  const texts = useI18N(i18n);
   return (
     <div className="px-8 pb-8">
-      <div className="mt-14 mb-3">
-        <Header
-          title="Atualizar Cadastro"
-          availableBalance={3550000}
-          amount={9970000}
-        />
-      </div>
-      <div className="mb-7">
-        <FormNavigation />
-      </div>
+      <Header
+        pageTitle={texts.title}
+        balanceAvailable={3550095}
+        amount={9970000}
+      />
+      <FormNavigation />
 
       <Suspense fallback={<h1>Loading...</h1>}>
         <Routes>
