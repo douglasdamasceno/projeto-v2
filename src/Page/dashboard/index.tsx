@@ -9,12 +9,10 @@ import FormNavigation, {
 import { Header } from "../components/header";
 import { useI18N } from "../../hooks/i18n";
 
-const CompanyInformationForm = lazy(
-  () => import("../components/CompanyInformationForm")
-);
-const AddressForm = lazy(() => import("../components/AddressForm"));
-const OperationForm = lazy(() => import("../components/OperationsForm"));
-const ContactForm = lazy(() => import("../components/ContactForm"));
+const CompanyInfoForm = lazy(() => import("../components/company-info-form"));
+const AddressForm = lazy(() => import("../components/address-form"));
+const OperationForm = lazy(() => import("../components/operations-form"));
+const ContactsForm = lazy(() => import("../components/contacts-form"));
 
 export default function App(props: any) {
   const handleSubmitAddress = (result: any) => {
@@ -36,9 +34,7 @@ export default function App(props: any) {
         <Routes>
           <Route
             path={pageInfoNavigation[0].path}
-            element={
-              <CompanyInformationForm handleSubmit={handleSubmitAddress} />
-            }
+            element={<CompanyInfoForm handleSubmit={handleSubmitAddress} />}
           />
           <Route
             path={pageInfoNavigation[1].path}
@@ -48,7 +44,7 @@ export default function App(props: any) {
             path={pageInfoNavigation[2].path}
             element={<OperationForm />}
           />
-          <Route path={pageInfoNavigation[3].path} element={<ContactForm />} />
+          <Route path={pageInfoNavigation[3].path} element={<ContactsForm />} />
         </Routes>
       </Suspense>
     </div>

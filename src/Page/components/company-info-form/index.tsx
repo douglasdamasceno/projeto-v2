@@ -1,15 +1,13 @@
 import React, { useState } from "react";
-import { Button } from "../../components/button";
-import Input from "../../components/Input";
-import InputPassword from "../../components/InputPassword";
+import { Button } from "../../../components/button";
+import Input from "../../../components/Input";
+import InputPassword from "../../../components/input-password";
 
-interface CompanyInformationFormProps {
+interface CompanyInfoFormProps {
   handleSubmit: (result: any) => void;
 }
 
-const CompanyInformationForm: React.FC<CompanyInformationFormProps> = ({
-  handleSubmit,
-}) => {
+const CompanyInfoForm: React.FC<CompanyInfoFormProps> = ({ handleSubmit }) => {
   const [formBasic, setFormBasic] = useState({
     name: "",
     cnpj: "",
@@ -178,4 +176,4 @@ const CompanyInformationForm: React.FC<CompanyInformationFormProps> = ({
     </>
   );
 };
-export default CompanyInformationForm;
+export default CompanyInfoForm;

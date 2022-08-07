@@ -1,8 +1,8 @@
 import React from "react";
-import { Button } from "../../components/button";
-import Input from "../../components/Input";
+import { Button } from "../../../components/button";
+import Input from "../../../components/Input";
 
-const ContactForm: React.FC = () => {
+const ContactsForm: React.FC = () => {
   const [contactForm, setContactForm] = React.useState({
     trackingContact: "",
     trackingPhone: "",
@@ -174,4 +174,4 @@ const ContactForm: React.FC = () => {
   );
 };
 
-export default ContactForm;
+export default ContactsForm;

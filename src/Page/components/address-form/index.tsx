@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Button } from "../../components/button";
-import Input from "../../components/Input";
+import { Button } from "../../../components/button";
+import Input from "../../../components/Input";
 
 interface AddressFormProps {
   handleSubmit: (result: any) => void;
